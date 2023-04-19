@@ -1,0 +1,31 @@
+p:first-child{
+    color: red;
+}
+
+p:last-child{
+    color: orange;
+}
+
+p:nth-child(3){
+    background-color: blue;
+}
+
+p:first-of-type{
+    background-color: green;
+}
+p:last-of-type{
+    background-color: red;
+}
+
+p:nth-of-type(2){
+    text-decoration: underline;
+}
+
+li:nth-child(3n - 2){
+    background-color: red;
+}
+
+p:nth-of-type(3n - 2){
+    text-align: right;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Pseudo-elementos</title>
+
+    <style>
+        p::first-letter {
+            font-size: 3em;
+            float: left;
+            margin-right: .2em;
+            line-height: 1;
+        }
+
+        p::first-line {
+            color: red;
+        }
+
+        ::selection {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iure error quod vel quia itaque esse praesentium
+        iusto maiores nostrum inventore corrupti, perspiciatis est in exercitationem voluptate reiciendis ab!
+        Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iure error quod vel quia itaque esse praesentium
+        iusto maiores nostrum inventore corrupti, perspiciatis est in exercitationem voluptate reiciendis ab!
+        Aspernatur.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iure error quod vel quia itaque esse praesentium
+        iusto maiores nostrum inventore corrupti, perspiciatis est in exercitationem voluptate reiciendis ab!
+        Aspernatur.</p>
+</body>
+
+</html>

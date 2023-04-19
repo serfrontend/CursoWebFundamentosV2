@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Seletores de atributos</title>
+
+    <style>
+        a {
+            display: inline-block;
+            margin-bottom: 1em;
+        }
+
+        a[target="_blank"]::after {
+            content: url(imagens/newWindow-icon.png);
+            margin-left: .5em;
+        }
+
+        a[href$=".pdf"]::before {
+            content: url(imagens/pdf-icon.gif);
+            margin-right: .5em;
+        }
+
+        input[type="checkbox"]:checked+label {
+            color: green;
+        }
+
+        input[type="checkbox"]:not(:disabled)+label {
+            color: red;
+        }
+
+        input[type="checkbox"]:disabled+label {
+            color: blue;
+        }
+
+        li li:nth-child(3) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Desafio</h1>
+    <ol>
+        <li>Incluir ícone DEPOIS do texto dos links que abrem em nova aba</li>
+        <li>Incluir ícone ANTES do texto dos links que abrem um PDF</li>
+        <li>Colorir os textos do labels que vêem após os checkboxes seguindo a seguinte regra
+            <ol>
+                <li>Após o status checked a cor do label deve ser verde</li>
+                <li>Após o status não checked a cor do label deve ser vermelho</li>
+                <li>Se o label vem após um checkbox disabled, a cor deve ser azul</li>
+                <li>Nessa lista ordenada, colocar um background qualquer no terceiro filho (li) desde que esteja contido
+                    dentro de outra lista (ul ou ol)
+                    <ul>
+                        <li>item 1</li>
+                        <li>item 2</li>
+                        <li>item 3</li>
+                        <li>item 4</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ol>
+    <p><b>Atenção:</b> Não é permitido alterar nada no HTML (nem mesmo adicionar classes</p>
+
+    <a href="http://serfrontend.com" target="_blank">link externo</a><br>
+    <a href="qq.pdf">download do PDF</a>
+
+    <hr>
+
+    <input type="checkbox" name="chk1" id="chk1">
+    <label for="chk1">
+        li e aceito o contrato
+    </label>
+    <input type="checkbox" name="chk2" id="chk2" disabled checked>
+    <label for="chk2">
+        li e aceito o contrato
+    </label>
+
+</body>
+
+</html>

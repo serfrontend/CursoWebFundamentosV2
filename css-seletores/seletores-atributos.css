@@ -1,0 +1,15 @@
+a[href="#"]:not(.link-ok){
+    opacity: .2;
+}
+
+a[href^="http"]{
+    color: red;
+}
+
+a[href$=".pdf"]{
+    color: green;
+}
+
+a[target="_blank"]{
+    text-decoration: none;
+}

@@ -1,0 +1,34 @@
+p::before{
+    content: " ANTES "
+}
+
+p::after{
+    content: " DEPOIS";
+}
+
+div{
+    border: 4px solid red;
+    padding: 1em;
+    position: relative;
+}
+
+p{
+    margin: 0;
+}
+
+div::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+div::before{
+    content: url(https://via.placeholder.com/64/0000FF/ffffff);
+    float: left;
+    margin-right: 1em;
+}

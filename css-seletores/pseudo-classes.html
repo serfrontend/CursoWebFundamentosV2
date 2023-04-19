@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Pseudo-classes</title>
+
+    <style>
+        button {
+            background-color: #7a7979;
+            color: white;
+            border: none;
+            padding: 1em;
+            margin-bottom: .5em;
+        }
+
+        button:disabled {
+            opacity: .5;
+        }
+
+        p:empty:before {
+            content: "paragrafo vazio ????"
+        }
+
+        a:hover,
+        a:focus {
+            background-color: yellow;
+        }
+
+        input[type="text"]:read-write {
+            background-color: #999;
+            border: none;
+            padding: .5em;
+        }
+
+        input[type="text"]:disabled {
+            background-color: white;
+        }
+
+        input[type="text"]:read-only:not(:disabled) {
+            background-color: yellow;
+        }
+
+        input[type="text"]::placeholder {
+            color: white;
+        }
+
+        input[type="text"]:placeholder-shown {
+            background-color: aqua;
+        }
+
+        p:only-child {
+            background-color: orangered;
+        }
+
+        p:read-write {
+            border-bottom: 2px solid red;
+        }
+
+        div:target {
+            border: 4px dashed red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="top">
+        <a href="#titulo">vai para o Titulo</a>
+        <br>
+        <button>Vai</button><br>
+        <button disabled>Vai disabled</button>
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, facilis!</p>
+    <p> </p>
+    <p></p>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+
+    <form action="#">
+        <input type="text" value="valor inicial"><br><br>
+        <input type="text" value="valor" disabled><br><br>
+        <input type="text" value="valor" readonly><br><br>
+        <input type="text" placeholder="placeholder"><br><br>
+
+    </form>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <hr>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p contenteditable>paragrafo editável</p>
+    </div>
+
+    <div id="titulo">
+        <h1>titulo</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, modi laborum accusamus id incidunt iure
+            dicta suscipit quisquam error quaerat quas a illum. Soluta quasi id, eaque repellendus accusantium sint.</p>
+        <a href="#top">Vai pra cima</a>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

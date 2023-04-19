@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- doctype informa ao agente de usuario a versão do html que deve ser renderizada-->
+<html lang="pt-br">
+
+<head>
+    <title> pagina de exemplo estrutura basica </title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="descrição bacanuda">
+    <meta name="keywords" content="html5, tecnologia">
+
+    <style>
+        div {
+            border: 4px solid black;
+            padding: 12px;
+            margin-bottom: 12px;
+            background-color: rgba(0, 0, 0, .2);
+            font-size: 18px;
+            font-family: sans-serif;
+            width: 60%;
+        }
+
+        .div2.group2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: white;
+            z-index: 2;
+        }
+
+        .div2.group1 {
+            /* position: absolute; */
+            top: 100px;
+            left: 0;
+            background-color: white;
+            /* z-index: 0; */
+        }
+
+        .div3.group1 {
+            position: relative;
+            z-index: 2;
+            background-color: red;
+        }
+
+        .div4.group1 {
+            position: relative;
+            bottom: 35px;
+            left: 15px;
+            background-color: yellow;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="div1 group1">div1 grupo1
+        <div class="div2 group1">div2 grupo1
+            <div class="div3 group1">div3 grupo1</div>
+            <div class="div4 group1">div4 grupo1</div>
+        </div>
+    </div>
+
+    <div class="div1 group2">div1 grupo2
+        <div class="div2 group2">div2 grupo2
+            <div class="div3 group2">div3 grupo2</div>
+            <div class="div4 group2">div4 grupo2</div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

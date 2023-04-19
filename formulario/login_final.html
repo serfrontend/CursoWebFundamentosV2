@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Login</title>
+
+    <style>
+        html {
+            background: #95a5a6;
+            font-family: 'Helvetica Neue', Arial, Sans-Serif;
+            min-height: 100vh;
+
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        form {
+            margin: 0 auto;
+            background: #ecf0f1;
+            width: 350px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 10px #333;
+            padding: 1em;
+        }
+
+        input,
+        label {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        label {
+            margin-bottom: .25em;
+        }
+
+        input {
+            padding: .75em;
+            border-radius: 5px;
+            margin-bottom: 1.5em;
+            border: 1px solid #bbb;
+            font-size: 1em;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            padding: 1em;
+            margin: 0;
+            display: block;
+            text-align: center;
+            margin: 1em 0 .5em;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #454e4f;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Login</h1>
+
+    <form action="#" method="get">
+        <fieldset>
+
+            <legend>Entre com seus dados de acesso</legend>
+
+            <label for="user">Usuário</label>
+            <input type="text" id="user" required autofocus>
+
+            <label for="pass">Senha</label>
+            <input type="password" id="pass" required>
+
+            <input type="submit" value="Entrar">
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>
