@@ -1,0 +1,121 @@
+:root {
+    --large-default-padding: 6.5em;
+    --medium-default-padding: 4em;
+}
+
+body {
+    font-family: "Roboto", tahoma, arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#principal {
+    width: 64em;
+    margin: 1.25em auto;
+}
+
+h1,
+h2 {
+    font-family: 'Viaoda Libre', cursive;
+    font-weight: normal;
+}
+
+.header-top {
+    background: #162028;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logotipo {
+    margin: .5em 0 .5em 8.4375em;
+    color: white;
+}
+
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: 1em;
+}
+
+.header-nav a {
+    color: #425564;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .15em;
+    transition: color .3s linear;
+}
+
+.header-nav a:hover {
+    color: white;
+}
+
+
+.portfolio {
+    padding: var(--medium-default-padding) var(--large-default-padding);
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 2.25em;
+    color: #252525;
+}
+
+.portfolio p {
+    font-size: 1em;
+    line-height: 2;
+    color: #555;
+}
+
+.gallery {
+    color: #555;
+    padding: 0 var(--large-default-padding) var(--medium-default-padding);
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-card {
+    text-align: center;
+}
+
+.gallery-title {
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.about {
+    background-color: #003d52;
+    padding: var(--large-default-padding);
+    color: white;
+    background-image: url(../imagens/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.about h2 {
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: normal;
+}
+
+.about p {
+    line-height: 1.5;
+    width: 70%;
+}
+
+.footer {
+    background: #0b171f;
+    padding: 1.8em;
+    font-size: .75em;
+    color: #6f8597;
+    letter-spacing: .3em;
+    text-align: center;
+}
