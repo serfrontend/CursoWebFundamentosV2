@@ -6,8 +6,52 @@
 
     <title>Projeto My Components</title>
 
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/brands.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="assets/icomoon-svg/style.css">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+        .svg-teste {
+            fill: green;
+        }
+
+        .fa-brands {
+            font-size: 4rem;
+            color: var(--primary-color)
+        }
+
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            fill: var(--primary-color);
+        }
+
+        .link-icon {
+            display: inline-block;
+            margin-right: 3rem;
+            transition: color .3s;
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .link-icon svg {
+            width: 4rem;
+            height: 4rem;
+            fill: currentColor;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .link-icon:hover {
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 
 <body>
@@ -50,12 +94,59 @@
             <h3>Venha conhecer nossas redes sociais</h3>
 
             <p>
-                <a href="#">Youtube</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Linkedin</a>
+                <a href="#" class="link-icon">
+
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-youtube"></use>
+                    </svg>Youtube</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-instagram"></use>
+                    </svg>Instagram</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-twitter"></use>
+                    </svg>Twitter</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>Linkedin</a>
             </p>
         </address>
+
+        <hr>
+        <h3>Imagens vetoriais vs bitmap</h3>
+
+        <svg width="48" height="48" viewBox="0 0 958 889" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M433.991 0.77756C408.176 5.85027 383.818 15.417 363.496 29.4779L86.2709 221.285C22.6864 265.278 22.6864 336.604 86.2709 380.597L429.284 617.922C456.535 636.776 500.716 636.776 527.967 617.922C555.217 599.068 555.217 568.5 527.967 549.645L184.954 312.321C175.87 306.036 175.87 295.846 184.954 289.562L433.991 117.257V0.77756ZM523.259 117.256L838.086 335.08C865.336 353.934 909.518 353.934 936.768 335.08C964.019 316.225 964.019 285.657 936.768 266.803L593.755 29.4779C573.432 15.4168 549.074 5.84999 523.259 0.777334V117.256Z"
+                fill="#EE3231" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M772.297 577.1C781.381 583.384 781.381 593.574 772.297 599.858L523.259 772.164V888.643C549.074 883.57 573.432 874.003 593.755 859.942L870.98 668.135C934.564 624.142 934.564 552.816 870.98 508.823L527.967 271.498C500.716 252.644 456.534 252.644 429.284 271.498C402.034 290.352 402.034 320.921 429.284 339.775L772.297 577.1ZM433.991 888.643C408.176 883.57 383.818 874.003 363.496 859.942L20.4823 622.617C-6.76815 603.763 -6.76815 573.195 20.4823 554.341C47.7328 535.486 91.9146 535.486 119.165 554.341L433.991 772.163V888.643Z"
+                fill="#EE3231" class="svg-teste" />
+        </svg>
+
+        <hr>
+
+        <img src="imagens/serliv.png" alt="" width="48">
+        <br>
+        <img src="imagens/serliv.svg" alt="" width="48">
+
+        <br>
+        <p>Aqui está o ícone usando o font-awesome v6 <i class="fa-brands fa-twitter"></i>
+            <!-- <i class="fab fa-twitter"></i> v5.15-->
+        </p>
+
+        <hr>
+
+        <p>Aqui está um icone usando svg externo do iconmoon
+
+            <svg class="icon">
+                <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+
+        </p>
+
     </main>
 
 
