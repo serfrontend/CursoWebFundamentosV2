@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .gridContainer {
+            width: 100vw;
+            height: 100vh;
+            background: #ccc;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+        <header class="header gridItem">header</header>
+        <nav class="nav gridItem">nav</nav>
+        <aside class="aside gridItem">aside</aside>
+        <main class="main gridItem">
+            main
+        </main>
+        <footer class="footer gridItem">footer</footer>
+    </div>
+</body>
+
+</html>
