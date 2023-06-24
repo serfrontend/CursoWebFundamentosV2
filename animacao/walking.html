@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cat {
+            width: 400px;
+            height: 200px;
+            background-image: url(walking_sprite.png);
+            background-position: 0 0;
+            background-repeat: no-repeat;
+
+            animation: anda 1s steps(12) infinite;
+
+            transform: scaleX(-1)
+        }
+
+        @keyframes anda {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 -2390px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cat"></div>
+</body>
+
+</html>
