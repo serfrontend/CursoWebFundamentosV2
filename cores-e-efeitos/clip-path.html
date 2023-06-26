@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip path</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: brown;
+            margin-bottom: 50vh;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: lighter;
+            text-align: center;
+        }
+
+
+
+        .card {
+
+            width: 300px;
+            background-color: white;
+            padding: 40px 30px 30px 50px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .card::before {
+            content: "";
+            display: block;
+            width: 34px;
+            height: 34px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+        .card_title {
+            margin: 0;
+            font-weight: lighter;
+        }
+
+        .exemplo {
+            width: 0;
+            height: 0;
+            /* background-color: yellow; */
+            border-top: 10px solid black;
+            border-right: 25px solid transparent;
+            border-left: 25px solid transparent;
+            border-bottom: 45px solid blueviolet;
+            margin-top: 30px;
+        }
+
+        .clippath>div {
+            width: 300px;
+            height: 300px;
+            margin: 30px;
+            background-image: repeating-linear-gradient(45deg, yellow 10%, orange 20%);
+        }
+
+        #d1 {
+            clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 20% 50%);
+        }
+
+        #d2 {
+            clip-path: circle(50% at center);
+        }
+
+        #d3 {
+            clip-path: ellipse(50% 50px at center);
+        }
+
+        #d4 {
+            clip-path: inset(20px 30px 40px 50px);
+        }
+
+        #d5 {
+            clip-path: inset(30px round 50px 20px 10px 25% / 20px 50px);
+        }
+
+        #d6 {
+            clip-path: ellipse(40% 46% at 51% 52%);
+        }
+    </style>
+</head>
+
+<body>
+    <article class="card">
+        <h2 class="card_title">Lorem ipsum dolor</h2>
+        <p>
+            Sit amet consectetur adipisicing elit. Similique officia facere quos ratione, ipsam libero
+            illum dolorem cupiditate reprehenderit reiciendis dolor.
+        </p>
+    </article>
+
+    <div class="exemplo"></div>
+
+    <section class="clippath">
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <div id="d3"></div>
+        <div id="d4"></div>
+        <div id="d5"></div>
+        <div id="d6"></div>
+    </section>
+</body>
+
+</html>
