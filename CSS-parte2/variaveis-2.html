@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Variáveis - Parte 2</title>
+
+    <style>
+        :root {
+            --success-color: green;
+            --error-color: red;
+            --angle: 0deg;
+        }
+
+        body {
+            --error-color: orange;
+            color: whitesmoke;
+            background-color: rgb(3, 0, 11);
+        }
+
+        .container {
+            --error-color: pink;
+        }
+
+        .div2 {
+            --error-color: 50px;
+        }
+
+        b {
+            color: var(--error-color2, red);
+        }
+
+        .anima {
+            width: 200px;
+            height: 200px;
+            background-color: var(--success-color);
+            transform: rotate(var(--angle));
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="div1">
+            <p>Lorem, ipsum <b>dolor</b>.</p>
+        </div>
+        <div class="div2">
+            <p>Lorem, <b>ipsum</b> dolor.</p>
+        </div>
+    </div>
+    <p>teste</p>
+
+    <div class="anima">Anima</div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Variáveis - Parte 2</title>
+
+    <style>
+        @property --success-color {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: green;
+        }
+
+        @property --angle {
+            syntax: "<angle>";
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        :root {
+            --success-color: blue;
+            /*--error-color: red;
+            --angle: 0deg; */
+        }
+
+
+
+        body {
+            --success-color: 50px;
+            color: whitesmoke;
+            background-color: rgb(3, 0, 11);
+        }
+
+
+
+        b {
+            color: var(--success-color, red);
+        }
+
+        .anima {
+            width: 200px;
+            height: 200px;
+            background-color: var(--success-color, blue);
+            transform: rotate(var(--angle));
+            animation: rotate 5s linear infinite;
+        }
+
+        @keyframes rotate {
+            to {
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="div1">
+            <p>Lorem, ipsum <b>dolor</b>.</p>
+        </div>
+        <div class="div2">
+            <p>Lorem, <b>ipsum</b> dolor.</p>
+        </div>
+    </div>
+    <p>teste</p>
+
+    <div class="anima">Anima</div>
+</body>
+
+</html>

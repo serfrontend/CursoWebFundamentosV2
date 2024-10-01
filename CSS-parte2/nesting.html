@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Nesting CSS</title>
+
+    <style>
+        .div1 {
+            background-color: yellow;
+        }
+
+        /* .container .div1 {
+            background-color: red;
+        } */
+
+        .container {
+            color: blue;
+
+            .div1 {
+                background-color: red;
+            }
+
+            .paragrafo {
+                font-weight: bold;
+
+                &.destaque {
+                    color: orange;
+                }
+            }
+        }
+
+        a {
+            color: red;
+
+            &:hover {
+                color: green;
+                text-decoration: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="div1">
+            <p class="paragrafo">Lorem, ipsum <b>dolor</b>.</p>
+        </div>
+        <div class="div2">
+            <p class="paragrafo destaque">Lorem, <b class="destaque">ipsum</b> dolor.
+                <a href="#">link</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="div1">
+        <p>Lorem, ipsum <b>dolor</b>.</p>
+    </div>
+    <div class="div2">
+        <p>Lorem, <b>ipsum</b> dolor.</p>
+    </div>
+
+</body>
+
+</html>

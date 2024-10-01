@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        a {
+            display: inline-block;
+            margin: 1em;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 5px;
+            border: 1px solid black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: right;
+            background: #ccc5;
+            backdrop-filter: blur(10px);
+        }
+
+        .scroll-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-size: 5em;
+        }
+
+        @media (prefers-reduced-motion) {
+            .scroll-page {
+                background-color: bisque;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contatos">Contatos</a>
+    </nav>
+
+    <div class="scroll-page" id="home">
+        <h1>Página Inicial</h1>
+    </div>
+    <div class="scroll-page" id="projetos">
+        <h2>Projetos</h2>
+    </div>
+    <div class="scroll-page" id="contatos">
+        <h2>Contatos</h2>
+    </div>
+
+</body>
+
+</html>

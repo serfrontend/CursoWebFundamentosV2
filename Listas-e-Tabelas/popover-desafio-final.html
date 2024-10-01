@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile-header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .help-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .help-button:hover {
+            background-color: #0056b3;
+        }
+
+        .popover-content {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        ::backdrop {
+            background-color: rgb(0, 0, 0, .5);
+        }
+
+        :popover-open {
+            inset: unset;
+            /* remover qualquer valor aplicado, até mesmo 0, de top, left, right e bottom*/
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1>Perfil de Cauã Victor</h1>
+            <button class="help-button" popovertarget="help-name">Ajuda</button>
+
+            <div id="help-name" class="popover-content" popover>
+                O nome completo do usuário. Ele pode ser alterado nas configurações de perfil.
+            </div>
+
+
+        </div>
+        <p><strong>Nome:</strong> Cauã Victor</p>
+
+
+
+        <hr>
+
+        <div class="profile-header">
+            <h1>Informações de Contato</h1>
+            <button class="help-button" popover="auto" popover-target="#help-contact">Ajuda</button>
+        </div>
+        <p><strong>Email:</strong> cauavictor@example.com</p>
+
+        <div id="help-contact" class="popover-content" hidden>
+            Seu endereço de e-mail. Certifique-se de que está atualizado para receber notificações importantes.
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
