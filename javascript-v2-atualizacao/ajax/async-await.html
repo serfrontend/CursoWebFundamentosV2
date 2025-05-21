@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecth</title>
+</head>
+
+<body>
+
+    <ul id="lista"></ul>
+
+    <script>
+        console.log("inicio do código")
+
+
+        function mostraDados(dados) {
+            const lista = document.querySelector("#lista")
+            let resultado = ""
+
+            dados.forEach(dado => {
+                console.log(dado)
+                resultado += `<li>Nome: ${dado.nome}, e-mail: ${dado.email}</li>`
+            })
+            lista.innerHTML = resultado
+
+        }
+
+
+        async function buscarDados() {
+            console.log("inicio do buscarDados")
+            try {
+                const resposta = await fetch("./dados.json")
+                if (!resposta.ok) {
+                    throw Error("Erro na requisição")
+                }
+                const dados = await resposta.json()
+                console.log(dados)
+                mostraDados(dados)
+            } catch (e) {
+                console.error("Error: ", e)
+            }
+
+            console.log("fim do buscarDados")
+        }
+
+        buscarDados()
+
+
+
+        console.log("fim do código")
+    </script>
+
+</body>
+
+</html>

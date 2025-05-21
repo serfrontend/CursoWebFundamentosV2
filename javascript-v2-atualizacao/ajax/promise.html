@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+
+    <script>
+        console.log("inicio do código")
+
+
+
+        const promessa = new Promise((resolve, reject) => {
+            setTimeout(function () {
+                resolve("Sucesso vindo do Timeout")
+                // reject("Erro vindo do Timeout")
+            }, 1000)
+        })
+
+        promessa
+            .then(resposta => console.log(resposta))
+            .then(() => {
+                console.log("novo then encadeado")
+                return "---------"
+            })
+            .then((resposta) => {
+                console.log("novo then encadeado 2", resposta)
+            })
+            .catch(erro => console.log("Erro:", erro))
+            .finally(() => {
+                console.log("finally sempre é executado")
+            })
+
+        console.log("fim do código")
+    </script>
+
+</body>
+
+</html>
